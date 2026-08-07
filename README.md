@@ -4,14 +4,14 @@ AI-threatguard is an AI-powered cybersecurity analysis platform with threat scan
 
 ## Project Structure
 
-- `backend/` — FastAPI backend service with SQLAlchemy, Alembic, authentication, scanning, assistant, and admin routes.
-- `frontend/` — React application built with Vite, Tailwind-like styling, Framer Motion, and Recharts.
-- `nginx/` — Production NGINX proxy configuration.
-- `.github/workflows/` — CI/CD workflow for validating builds and Docker images.
-- `docker-compose.yml` — Production Docker Compose stack.
-- `docker-compose.dev.yml` — Local development Docker Compose stack.
-- `API_DOCUMENTATION.md` — Backend API reference.
-- `DEPLOYMENT.md` — Production deployment guide.
+- `backend/` ï¿½ FastAPI backend service with SQLAlchemy, Alembic, authentication, scanning, assistant, and admin routes.
+- `frontend/` ï¿½ React application built with Vite, Tailwind-like styling, Framer Motion, and Recharts.
+- `nginx/` ï¿½ Production NGINX proxy configuration.
+- `.github/workflows/` ï¿½ CI/CD workflow for validating builds and Docker images.
+- `docker-compose.yml` ï¿½ Production Docker Compose stack.
+- `docker-compose.dev.yml` ï¿½ Local development Docker Compose stack.
+- `API_DOCUMENTATION.md` ï¿½ Backend API reference.
+- `DEPLOYMENT.md` ï¿½ Production deployment guide.
 
 ## Local Development
 
@@ -53,8 +53,8 @@ It validates Python syntax, builds the frontend, and verifies Docker Compose.
 
 ## Documentation
 
-- `API_DOCUMENTATION.md` — Backend API endpoints and request formats.
-- `DEPLOYMENT.md` — Production deployment instructions.
+- `API_DOCUMENTATION.md` ï¿½ Backend API endpoints and request formats.
+- `DEPLOYMENT.md` ï¿½ Production deployment instructions.
 
 ## GitHub Pages deployment
 
@@ -76,3 +76,5 @@ For this repository, that will typically be:
 ```text
 https://vangaaditi2025.github.io/ai-threatguard/
 ```
+
+If your backend is hosted on Railway, use your Railway public backend URL for `VITE_API_URL`.

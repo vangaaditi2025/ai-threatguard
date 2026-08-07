@@ -23,6 +23,25 @@ Notes:
 - The backend container now reads Render's `PORT` variable automatically.
 - Frontend deployment (`.github/workflows/deploy-pages.yml`) remains unchanged.
 
+## Deploy Backend on Railway
+
+Use Railway to deploy only the backend API (frontend can remain on GitHub Pages).
+
+1. Create a new Railway project from this repository.
+2. Railway will read `railway.json` and build using `backend/Dockerfile`.
+3. Add environment variables in Railway:
+   - `DATABASE_URL` (required): PostgreSQL connection string.
+   - `FRONTEND_ORIGINS` (required): comma-separated frontend origins (for example, your GitHub Pages URL).
+4. Optional Gemini settings:
+   - `GEMINI_API_KEY`
+   - `GEMINI_MODEL` (defaults to `gemini-1.5-mini`)
+   - `GEMINI_API_URL`
+
+Notes:
+- Backend entrypoint is `app.main:app` from `backend/app/main.py`.
+- Railway provides `PORT`; backend Docker startup already uses `${PORT:-8000}`.
+- Frontend deployment workflow remains unchanged.
+
 ## Prerequisites
 
 - Docker Engine
