@@ -4,6 +4,25 @@
 
 This document describes how to deploy AI ThreatGuard in production using Docker Compose and NGINX.
 
+## Deploy Backend on Render
+
+Use Render to deploy only the backend API (the frontend can stay on GitHub Pages).
+
+1. Push this repository to GitHub (if not already).
+2. In Render, create a new **Blueprint** service from the repository root. Render will detect `render.yaml`.
+3. Set the required environment variables in Render:
+   - `DATABASE_URL` (required): PostgreSQL connection string for the backend.
+   - `FRONTEND_ORIGINS` (required): comma-separated allowed frontend origins (for example, your GitHub Pages URL).
+4. Optional Gemini settings:
+   - `GEMINI_API_KEY`
+   - `GEMINI_MODEL` (defaults to `gemini-1.5-mini`)
+   - `GEMINI_API_URL`
+
+Notes:
+- Backend entrypoint is `app.main:app` from `backend/app/main.py`.
+- The backend container now reads Render's `PORT` variable automatically.
+- Frontend deployment (`.github/workflows/deploy-pages.yml`) remains unchanged.
+
 ## Prerequisites
 
 - Docker Engine
