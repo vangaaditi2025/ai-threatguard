@@ -28,7 +28,7 @@ Notes:
 Use Railway to deploy only the backend API (frontend can remain on GitHub Pages).
 
 1. Create a new Railway project from this repository.
-2. Railway will read `railway.json` and build using `backend/Dockerfile`.
+2. Railway will read `railway.json` and build using `Dockerfile.railway`.
 3. Add environment variables in Railway:
    - `DATABASE_URL` (required): PostgreSQL connection string.
    - `FRONTEND_ORIGINS` (required): comma-separated frontend origins (for example, your GitHub Pages URL).
